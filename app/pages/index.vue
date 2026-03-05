@@ -4,13 +4,16 @@
     <!-- ═══════════════ HERO ═══════════════ -->
  <section class="hero">
       <div class="hero__bg">
+        
         <img src="/img/banner/banner1.png" alt="Jauregui Industrial Ferretera" aria-hidden="true" class="hero__bg-img" />
+        
         <div class="hero__overlay"></div>
         <div class="hero__grid-lines"></div>
         <div class="hero__diagonal"></div>
       </div>
 
       <div class="container hero__content">
+       <div class="hero__left">
         <!-- Eyebrow -->
         <div class="hero__eyebrow">
           <span class="hero__eyebrow-dot"></span>
@@ -49,6 +52,10 @@
         </div>
       </div>
 
+      <!--Hero Right-->
+
+  
+</div>
       <!-- Scroll indicator -->
       <div class="hero__scroll">
         <div class="hero__scroll-line"></div>
@@ -179,10 +186,12 @@ const perks = [
   opacity: 0.85; 
 }
 
-.hero__overlay {
-  position: absolute; inset: 0;
-  /* LA MAGIA: Oscuro a la izquierda (texto), transparente a la derecha (imagen libre) */
-  background: linear-gradient(90deg, rgba(8,10,12,0.95) 0%, rgba(8,10,12,0.85) 40%, rgba(8,10,12,0.1) 100%);
+.hero__overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.45) 40%, rgba(0,0,0,.70) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.60) 100%);
 }
 
 .hero__grid-lines {
@@ -208,10 +217,11 @@ const perks = [
 .hero__content {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding-top: 80px;
-  /* Forzamos el texto a no pasar de la mitad de la pantalla */
-  max-width: 650px; 
-  text-align: left;
+  align-items: center;
+  gap: 60px;
 }
 
 
@@ -313,6 +323,8 @@ const perks = [
   letter-spacing: 1px;
 }
 
+
+
 /* ── Section header ── */
 .section-header { margin-bottom: 52px; }
 
@@ -399,5 +411,13 @@ const perks = [
 @media (max-width: 520px) {
   .perks-grid { grid-template-columns: 1fr; }
   .cta-band__inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 900px){
+
+  .hero__content{
+    grid-template-columns: 1fr;
+    text-align:left;
+  }
+
 }
 </style>
