@@ -22,7 +22,7 @@
           <h1 class="hero__title">
             <span class="hero__title-top">JAUREGUI</span>
             <span class="hero__title-main">INDUSTRIAL</span>
-            <span class="hero__title-bottom">Ferretera</span>
+            <span class="hero__title-bottom">FERRETERA</span>
           </h1>
 
           <p class="hero__desc">
@@ -35,7 +35,7 @@
               Ver catálogo
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </NuxtLink>
-            <a href="https://wa.me/528997987131" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
+            <a href="https://wa.me/528991495634" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
               Cotizar ahora
             </a>
@@ -101,7 +101,7 @@
           <h2 class="cta-band__title">¿Listo para cotizar?</h2>
           <p class="cta-band__sub">Escríbenos por WhatsApp y te respondemos en minutos.</p>
         </div>
-        <a href="https://wa.me/528997987131?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20algunos%20productos"
+        <a href="https://wa.me/528991495634?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20algunos%20productos"
           target="_blank" rel="noopener" class="btn btn-brand btn-lg">
           Iniciar cotización →
         </a>
@@ -261,7 +261,9 @@ const perks = [
   text-transform: uppercase;
   line-height: 1;
   text-shadow: 0 2px 20px rgba(245,184,0,0.3);
+  padding-left: 30%;
 }
+
 .hero__title-main {
   font-size: clamp(3.2rem, 8vw, 6.5rem);
   font-weight: 900;
@@ -269,25 +271,34 @@ const perks = [
   letter-spacing: -2px;
   color: var(--text-primary);
   text-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  padding-left: 60%;
 }
 .hero__title-bottom {
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 300;
-  color: var(--text-secondary);
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-weight: 500; /* Lo subimos un poco (de 380 a 500) para darle más cuerpo */
+  color: #bdbdbd; /* Blanco puro para máximo contraste (o usa un var(--text-primary) si es blanco) */
   letter-spacing: 6px;
   text-transform: uppercase;
   margin-top: 4px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  
+  /* Sombra doble: una difuminada amplia y una corta muy oscura */
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.7);
+  
+  /* Ajuste seguro para tu escalonado */
+  padding-left: 120%; /* Cambiado de 110% para evitar que se desborde la pantalla */
 }
 
 .hero__desc {
   margin-top: 24px;
-  font-size: 17px;
+  font-size: 18px; /* Lo subimos un puntito (de 17px a 18px) */
+  font-weight: 400; /* Aseguramos un buen grosor base */
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: #bdbdbd; /* Blanco brillante para que no se pierda */
   max-width: 580px;
   animation: fadeUp 0.8s ease 0.2s both;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  
+  /* Sombra fuerte para despegar el párrafo de la imagen */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .hero__ctas {
@@ -299,28 +310,32 @@ const perks = [
 }
 
 .hero__stats {
-  display: flex;
+display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px; /* Espacio entre las cajas */
   margin-top: 48px;
   padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* Línea divisoria un poco más visible */
   flex-wrap: wrap;
   animation: fadeUp 0.8s ease 0.45s both;
 }
-.hero__stat { display: flex; flex-direction: column; gap: 3px; }
+.hero__stat { 
+  display: flex; flex-direction: column; gap: 3px; 
+
+}
 .hero__stat strong {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--text-primary);
+font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff; /* Blanco puro para que resalte al máximo */
   letter-spacing: -0.5px;
   line-height: 1;
 }
 .hero__stat span {
-  font-size: 11.5px;
-  color: var(--text-muted);
+font-size: 12px;
+  color: #e2e8f0; /* Gris muy claro, mucho más legible que el muted original */
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 /* Scroll indicator */
@@ -431,5 +446,67 @@ const perks = [
 @media (max-width: 520px) {
   .perks-grid { grid-template-columns: 1fr; }
   .cta-band__inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 768px) {
+  .hero__stats { 
+    gap: 16px; 
+    padding-top: 24px;
+  }
+  .hero__stat {
+    /* En tablet/celular, hacemos que ocupen la mitad de la pantalla (2 columnas) */
+    width: calc(50% - 8px); 
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero__stat {
+    /* En celulares muy pequeños, que ocupen todo el ancho (1 columna) */
+    width: 100%; 
+  }
+}
+/* ── RESPONSIVE PARA EL ESCALONADO DEL TÍTULO ── */
+
+/* 1. Laptops pequeñas y Tablets horizontales (Hasta 1024px) */
+/* Reducimos los porcentajes a la mitad para que no se desborde */
+@media (max-width: 1024px) {
+  .hero__title-top {
+    padding-left: 15%;
+  }
+  .hero__title-main {
+    padding-left: 30%;
+  }
+  .hero__title-bottom {
+    padding-left: 50%;
+  }
+}
+
+/* 2. Tablets verticales y móviles grandes (Hasta 768px) */
+/* El espacio ya es poco, mantenemos el efecto pero más compacto */
+@media (max-width: 768px) {
+  .hero__title-top {
+    padding-left: 5%;
+  }
+  .hero__title-main {
+    padding-left: 15%;
+  }
+  .hero__title-bottom {
+    padding-left: 25%;
+  }
+}
+
+/* 3. Teléfonos móviles (Hasta 520px) */
+/* Aquí el espacio es oro. Cambiamos a píxeles para tener control total
+   y damos un escalonado muy fino (de 10px en 10px) */
+@media (max-width: 520px) {
+  .hero__title-top {
+    padding-left: 0;
+  }
+  .hero__title-main {
+    padding-left: 10px;
+  }
+  .hero__title-bottom {
+    padding-left: 20px;
+  }
 }
 </style>

@@ -1,18 +1,18 @@
 <template>
   <div class="nosotros">
-    <section class="page-hero">
-      <div class="page-hero__bg"></div>
+<section class="page-hero">
+      
+      <div class="page-hero__bg">
+        <img src="/img/banner/banner1.png" alt="Fondo Jauregui Nosotros" aria-hidden="true" class="page-hero__bg-img" />
+        <div class="page-hero__overlay"></div>
+      </div>
+
       <div class="container page-hero__content">
         <p class="s-label" style="color:var(--brand)">Conócenos</p>
         <h1 class="page-hero__title">Quiénes Somos</h1>
         <p class="page-hero__desc">
           Empresa 100% mexicana con más de 10 años de experiencia como aliado industrial del noreste de México.
         </p>
-        <nav class="page-hero__breadcrumb">
-          <NuxtLink to="/">Inicio</NuxtLink>
-          <span>›</span>
-          <span>Nosotros</span>
-        </nav>
       </div>
     </section>
 
@@ -175,36 +175,36 @@ const qualityPills = ['Innovación tecnológica','Desarrollo humano','Liderazgo'
 </script>
 
 <style scoped>
-/* Page hero */
-.page-hero {
-  position: relative;
-  padding: 120px 0 72px;
-  overflow: hidden;
+/* 1. Contenedor limpio */
+.page-hero { position: relative; padding: 120px 0 72px; overflow: hidden; }
+.page-hero__bg { position: absolute; inset: 0; z-index: 0; }
+
+/* 2. Imagen centrada */
+.page-hero__bg-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-.page-hero__bg {
+
+/* 3. Overlay con oscurecimiento parejo + tu cuadrícula industrial */
+.page-hero__overlay {
   position: absolute; inset: 0;
-  background: var(--bg-darkest);
+  background-color: rgba(17, 17, 17, 0.85); 
   background-image:
     linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
   background-size: 56px 56px;
 }
+
+/* 4. La línea de colores de adorno abajo */
 .page-hero__bg::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
   background: linear-gradient(90deg, transparent, var(--brand) 40%, var(--accent) 60%, transparent);
 }
-.page-hero__content { position: relative; z-index: 1; }
-.page-hero__title {
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 900;
-  color: var(--text-primary);
-  letter-spacing: -1px;
-  margin: 8px 0 16px;
-  line-height: 1.05;
-}
+
+/* 5. Textos por encima de todo */
+.page-hero__content { position: relative; z-index: 2; }
+.page-hero__title { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; color: var(--text-primary); letter-spacing: -1px; margin: 8px 0 16px; line-height: 1.05; }
 .page-hero__desc { font-size: 17px; color: var(--text-secondary); max-width: 520px; line-height: 1.7; margin-bottom: 24px; }
 .page-hero__breadcrumb { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--text-muted); }
 .page-hero__breadcrumb a { color: var(--text-muted); text-decoration: none; }

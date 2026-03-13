@@ -1,15 +1,17 @@
 <template>
   <div class="contacto">
     <!-- Hero -->
-    <section class="page-hero">
-      <div class="page-hero__bg"></div>
+<section class="page-hero">
+      
+      <div class="page-hero__bg">
+        <img src="/img/banner/banner1.png" alt="Fondo Jauregui Contacto" aria-hidden="true" class="page-hero__bg-img" />
+        <div class="page-hero__overlay"></div>
+      </div>
+
       <div class="container page-hero__content">
         <p class="s-label" style="color:var(--brand)">Estamos aquí</p>
         <h1 class="page-hero__title">Contacto</h1>
         <p class="page-hero__desc">Visítanos, llámanos o escríbenos. Respondemos rápido.</p>
-        <nav class="page-hero__breadcrumb">
-          <NuxtLink to="/">Inicio</NuxtLink><span>›</span><span>Contacto</span>
-        </nav>
       </div>
     </section>
 
@@ -61,7 +63,7 @@
 
             <!-- WhatsApp CTA -->
             <a
-              href="https://wa.me/528997987131?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20productos"
+              href="https://wa.me/528991495634?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20productos"
               target="_blank" rel="noopener"
               class="btn btn-wa btn-lg contact-wa-btn"
             >
@@ -111,7 +113,7 @@
           <h2 class="cta-bottom__title">¿Tienes un proyecto?</h2>
           <p class="cta-bottom__sub">Cuéntanos qué necesitas y te preparamos una cotización sin compromiso.</p>
         </div>
-        <a href="https://wa.me/528997987131?text=Hola%2C%20tengo%20un%20proyecto%20y%20me%20gustar%C3%ADa%20cotizar"
+        <a href="https://wa.me/528991495634?text=Hola%2C%20tengo%20un%20proyecto%20y%20me%20gustar%C3%ADa%20cotizar"
           target="_blank" rel="noopener" class="btn btn-brand btn-lg">
           Solicitar cotización →
         </a>
@@ -125,7 +127,7 @@ const { isOpen, nextEvent } = useBusinessHours()
 
 useSeoMeta({
   title: 'Contacto | Jauregui Ferretera Industrial',
-  description: 'Visítanos en Ignacio Zaragoza #102, Col. Octavio Silva, Río Bravo, Tamaulipas. Tel: 8991495634. WhatsApp: 8997987131.',
+  description: 'Visítanos en Ignacio Zaragoza #102, Col. Octavio Silva, Río Bravo, Tamaulipas. Whatsapp: 8991495634. Tel: 8997987131.',
 })
 
 function isCurrentDay(dayNum: number): boolean {
@@ -163,17 +165,37 @@ const schedule = [
 
 <style scoped>
 /* page-hero same as other pages */
+/* 1. Contenedor limpio */
 .page-hero { position: relative; padding: 120px 0 72px; overflow: hidden; }
-.page-hero__bg {
+.page-hero__bg { position: absolute; inset: 0; z-index: 0; }
+
+/* 2. Imagen centrada */
+.page-hero__bg-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 3. Overlay con oscurecimiento parejo + tu cuadrícula industrial */
+.page-hero__overlay {
   position: absolute; inset: 0;
-  background: var(--bg-darkest);
-  background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-color: rgba(17, 17, 17, 0.85); 
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
   background-size: 56px 56px;
 }
-.page-hero__bg::after { content:''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--brand) 40%, var(--accent) 60%, transparent); }
-.page-hero__content { position: relative; z-index: 1; }
-.page-hero__title { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; color: var(--text-primary); letter-spacing: -1px; margin: 8px 0 16px; }
-.page-hero__desc { font-size: 17px; color: var(--text-secondary); max-width: 420px; line-height: 1.7; margin-bottom: 24px; }
+
+/* 4. La línea de colores de adorno abajo */
+.page-hero__bg::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--brand) 40%, var(--accent) 60%, transparent);
+}
+
+/* 5. Textos por encima de todo */
+.page-hero__content { position: relative; z-index: 2; }
+.page-hero__title { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; color: var(--text-primary); letter-spacing: -1px; margin: 8px 0 16px; line-height: 1.05; }
+.page-hero__desc { font-size: 17px; color: var(--text-secondary); max-width: 520px; line-height: 1.7; margin-bottom: 24px; }
 .page-hero__breadcrumb { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--text-muted); }
 .page-hero__breadcrumb a { color: var(--text-muted); text-decoration: none; }
 .page-hero__breadcrumb a:hover { color: var(--brand); }

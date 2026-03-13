@@ -2,7 +2,7 @@
   <Transition name="wa-float">
     <a
       v-if="visible"
-      href="https://wa.me/528997987131?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20productos"
+      href="https://wa.me/528991495634?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20productos"
       target="_blank"
       rel="noopener"
       class="wa-float"
