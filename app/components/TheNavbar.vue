@@ -10,8 +10,7 @@
       <!-- Desktop Nav -->
       <nav class="navbar__nav" role="navigation">
         <NuxtLink to="/"          class="navbar__link">Inicio</NuxtLink>
-      
-
+        
         <!-- Categorías dropdown -->
         <div class="navbar__dropdown-wrap" @mouseenter="catOpen = true" @mouseleave="catOpen = false">
           <NuxtLink to="/categorias" class="navbar__link navbar__link--caret">
@@ -36,8 +35,8 @@
             </div>
           </Transition>
         </div>
-
-          <NuxtLink to="/nosotros"  class="navbar__link">Nosotros</NuxtLink>
+        
+        <NuxtLink to="/nosotros"  class="navbar__link">Nosotros</NuxtLink>
         <NuxtLink to="/contacto"  class="navbar__link">Contacto</NuxtLink>
       </nav>
 
@@ -119,6 +118,13 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   z-index: 900;
   transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
   padding: 0;
+  /* Protección precisa: solo los 80px del navbar, nada más */
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 8, 10, 0.82) 0%,
+    rgba(7, 8, 10, 0.60) 60%,
+    rgba(7, 8, 10, 0.00) 100%
+  );
 }
 .navbar--scrolled {
   background: rgba(8, 10, 12, 0.94);

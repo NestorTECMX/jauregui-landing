@@ -47,11 +47,11 @@
             </li>
             <li>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg>
-              <span>(899) 149-5634<br>(899) 798-7131</span>
+              <span>(899) 149-5634<br>(899) 798-7131</span><span class="wa-chip">WhatsApp</span>
             </li>
             <li>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>jauregui_car@hotmail.com</span>
+              <span>jauregui_car@hotmail.com <br> jauregui.industrial@gmail.com</span>
             </li>
             <li>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -161,6 +161,15 @@ const cats = ['Automatización','Rodamientos','Electricidad','Mangueras Industri
   color: var(--text-muted);
   flex-wrap: wrap;
   gap: 8px;
+}
+/* WA chip */
+:deep(.wa-chip) { display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; background: rgba(37,211,102,0.12); color: #16a34a; padding: 2px 8px; border-radius: 99px; margin-left: 6px; }
+:deep(a) { color: var(--brand); text-decoration: none; }
+:deep(a:hover) { text-decoration: underline; }
+:deep(.contact-info-item__value a) { 
+  color: var(--brand); 
+  text-decoration: none; 
+  font-weight: 600;
 }
 
 /* Responsive */

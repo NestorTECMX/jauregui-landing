@@ -26,33 +26,6 @@
         <CategoryCarousel class="reveal reveal-delay-1" />
       </div>
     </section>
-
-    <!-- All categories grid detail -->
-    <section class="section-gap">
-      <div class="container">
-        <div class="reveal section-header">
-          <p class="s-label" style="color:var(--brand)">Todas las líneas</p>
-          <h2 class="s-title-light">Portafolio <span style="color:var(--brand)">completo</span></h2>
-        </div>
-        <div class="cat-detail-grid">
-          <div class="cat-detail-card reveal" v-for="(cat, i) in categories" :key="cat.id"
-            :class="`reveal-delay-${(i % 3) + 1}`">
-            <div class="cat-detail-card__header">
-              <div class="cat-detail-card__icon" v-html="cat.icon"></div>
-              <h3 class="cat-detail-card__title">{{ cat.name }}</h3>
-            </div>
-            <p class="cat-detail-card__desc">{{ cat.description }}</p>
-            <div class="cat-detail-card__tags">
-              <span v-for="t in cat.tags" :key="t">{{ t }}</span>
-            </div>
-            <a :href="`https://wa.me/528997987131?text=Hola%2C%20quiero%20cotizar%20de%20la%20categoría%3A%20${encodeURIComponent(cat.name)}`"
-              target="_blank" rel="noopener" class="cat-detail-card__cta">
-              Cotizar →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
