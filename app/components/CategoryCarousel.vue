@@ -289,7 +289,7 @@ const categories = [
 // ─── Logos / imágenes ────────────────────────────────────────────────────────
 const brandLogoMap: Record<string, Record<string, string>> = {
   ferretera: {
-    TRUPER: '/img/brands/truper.svg', DEWALT: '/img/brands/dewalt.png',
+    TRUPER: '/img/brands/truper.png', DEWALT: '/img/brands/dewalt.png',
     URREA: '/img/brands/urrea.png', MAKITA: '/img/brands/makita.png',
     CRAFTSMAN: '/img/brands/craftsman.png', MILWAUKEE: '/img/brands/milwaukee.png',
     AUSTROMEX: '/img/brands/austromex.png', FANDELI: '/img/brands/fandeli.png',
@@ -314,7 +314,7 @@ const brandLogoMap: Record<string, Record<string, string>> = {
     FLUKE: '/img/brands/fluke.png', HUBBELL: '/img/brands/hubbell.png',
   },
   seguridad: {
-    MSA: '/img/brands/msa.svg', M: '/img/brands/3m.png',
+    MSA: '/img/brands/msa.png', M: '/img/brands/3m.png',
     JIRSA: '/img/brands/jirsa.png', ANSELL: '/img/brands/ansell.png',
     CAT: '/img/brands/cat.png', GOJO: '/img/brands/gojo.png',
   },
@@ -577,7 +577,7 @@ onUnmounted(() => {
 }
 .marquee-item:hover { border-color: rgba(245,184,0,0.35); background: rgba(245,184,0,0.04); }
 .marquee-item__img {
-  max-height: 38px; max-width: 105px; object-fit: contain;
+  max-height: 65px; max-width: 130px; object-fit: contain;
   filter: grayscale(100%) brightness(0.5) invert(1); opacity: 0.65;
   transition: filter 0.4s ease, opacity 0.4s ease;
 }

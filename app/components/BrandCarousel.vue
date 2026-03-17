@@ -47,7 +47,7 @@
 import { computed } from 'vue'
 
 const brands = [
-  { name: 'TRUPER', img: 'truper.svg' },
+  { name: 'TRUPER', img: 'truper.png' },
   { name: 'DEWALT', img: 'dewalt.png' },
   { name: 'URREA', img: 'urrea.png' },
   { name: 'MAKITA', img: 'makita.png' },
@@ -76,7 +76,7 @@ const brands = [
   { name: 'LITTELFUSE', img: 'littelfuse.png' },
   { name: 'FLUKE', img: 'fluke.png' },
   { name: 'HUBBELL', img: 'hubbell.png' },
-  { name: 'MSA', img: 'msa.svg' },
+  { name: 'MSA', img: 'msa.png' },
   { name: 'JIRSA', img: 'jirsa.png' },
   { name: 'ANSELL', img: 'ansell.png' },
   { name: 'CAT', img: 'cat.png' },
